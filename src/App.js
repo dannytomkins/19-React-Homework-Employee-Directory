@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+// import API from "./components/API"
+import "./App.css";
+import Table from "./components/table"
+import Search from "./components/Search"
 
 function App() {
+  
+  const [people, setPeople] = useState([])
+  const [searchName, setSearchName] = useState("")
+  const [originalPeople, setOriginalPeople] = useState([])
+
+  useEffect(() => {
+    console.log("useEffect engaged")
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://randomuser.me/api/?results=100")
+        const data = await response.json()
+        setPeople([...data.results])
+        setOriginalPeople([...data.results])
+      } catch (e) {
+        console.log(e);
+      }
+    }
+
+    fetchData()
+
+  }, [])
+  const handleInputChange = event => {
+    const {value} = event.target
+    setSearchName(value)
+    console.log(value)
+    
+    const newPeople = originalPeople.filter(person => {
+      return person.name.first.toLowerCase().includes(value.toLowerCase())
+    })
+    setPeople(newPeople)
+
+  }
+
+  console.log("people1", people)
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {console.log("original", originalPeople)}
+      <Search searchName={searchName} handleInputChange={handleInputChange}/>
+      <Table  people={people} />
     </div>
   );
+
 }
 
 export default App;
