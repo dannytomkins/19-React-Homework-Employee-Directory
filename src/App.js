@@ -27,6 +27,9 @@ function App() {
     fetchData()
 
   }, [])
+
+  
+
   const handleInputChange = event => {
     const {value} = event.target
     setSearchName(value)
@@ -38,13 +41,11 @@ function App() {
         (person.name.last).toLowerCase().includes(value.toLowerCase())
     )
     })
-
     setPeople(newPeople)
-
   }
 
-  console.log("people1", people)
  
+
   return (
     <div>
       {console.log("original", originalPeople)}
