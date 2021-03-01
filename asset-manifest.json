@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/19-React-Homework-Employee-Directory/static/css/main.229d0cf6.chunk.css",
+    "main.js": "/19-React-Homework-Employee-Directory/static/js/main.656419cb.chunk.js",
+    "main.js.map": "/19-React-Homework-Employee-Directory/static/js/main.656419cb.chunk.js.map",
+    "runtime-main.js": "/19-React-Homework-Employee-Directory/static/js/runtime-main.9d17912f.js",
+    "runtime-main.js.map": "/19-React-Homework-Employee-Directory/static/js/runtime-main.9d17912f.js.map",
+    "static/js/2.d9b2facd.chunk.js": "/19-React-Homework-Employee-Directory/static/js/2.d9b2facd.chunk.js",
+    "static/js/2.d9b2facd.chunk.js.map": "/19-React-Homework-Employee-Directory/static/js/2.d9b2facd.chunk.js.map",
+    "static/js/3.403e6c79.chunk.js": "/19-React-Homework-Employee-Directory/static/js/3.403e6c79.chunk.js",
+    "static/js/3.403e6c79.chunk.js.map": "/19-React-Homework-Employee-Directory/static/js/3.403e6c79.chunk.js.map",
+    "index.html": "/19-React-Homework-Employee-Directory/index.html",
+    "static/css/main.229d0cf6.chunk.css.map": "/19-React-Homework-Employee-Directory/static/css/main.229d0cf6.chunk.css.map",
+    "static/js/2.d9b2facd.chunk.js.LICENSE.txt": "/19-React-Homework-Employee-Directory/static/js/2.d9b2facd.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d17912f.js",
+    "static/js/2.d9b2facd.chunk.js",
+    "static/css/main.229d0cf6.chunk.css",
+    "static/js/main.656419cb.chunk.js"
+  ]
+}
