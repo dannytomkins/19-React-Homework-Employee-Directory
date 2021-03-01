@@ -33,8 +33,12 @@ function App() {
     console.log(value)
     
     const newPeople = originalPeople.filter(person => {
-      return person.name.first.toLowerCase().includes(value.toLowerCase())
+      return (
+        (person.name.first).toLowerCase().includes(value.toLowerCase()) ||
+        (person.name.last).toLowerCase().includes(value.toLowerCase())
+    )
     })
+
     setPeople(newPeople)
 
   }
